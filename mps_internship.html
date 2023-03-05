@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+  <head>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="AI Center Fellow, Microsoft Research India">
+    <meta name="author" content="Andrija Kostić">
+    <meta name="theme-color" content="#222222">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="images/nicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/nicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/nicons/favicon-16x16.png">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/style-2.css">
+      
+    <title>Kuiper belt sculpting</title>
+  </head>
+  <body>
+    <div class="container pt-5 allstuffp">
+        <div class="row pt-5 allstuff">
+            <div class="col-md-4 pt-5">
+                <div class="fixed-posi">
+                <p class="name"><a class="in-text" href="index.html" target="_blank">Andrija's website</a></p>
+                <img src="images/LinkedInPhoto_edited.jpeg" class="profilepic pt-3 pb-2">
+                <div class="pt-5 menur"><a class="menulink" target="_blank" href="assets/andrija_cv.pdf">curriculum vitae</a></div>
+                <div class=""><a class="menulink" target="_blank" href="https://scholar.google.com/citations?user=2osqNjcAAAAJ&hl=en">google scholar</a></div>
+                <div class=""><a class="menulink" target="_blank" href="mailto:andrii.kostic@gmail.com">email address</a></div>
+                <div class=""><a class="menulink" target="_blank" href="https://github.com/Cosmicstring">github profile</a></div>
+                <div class=""><a class="menulink" target="_blank" href="www.linkedin.com/in/c0smicstring">linkedin</a></div>  
+
+                <!-- <div class="pt-5">usercontext</div> -->
+                <!-- <div class="">travel history</div> -->
+                <!-- <div class="">this template</div> -->
+                </div>
+            </div>
+            <div class="col-md-8 pt-5 about">
+                
+                <p class="header pt-5"> <u>Examining the Kuiper belt sculpting</u> <br>@ Max Planck Institute for Solar system research, 2015</p>
+                 
+                <p>The main goal of this research project was to see how the structures in the Kuper belt formed, mainly the eccentricity and the inclination distribution. All the simulations start just after the gas-disk dispersed and all the planets are fully formed. The only incorporated interaction is gravitational. Code that was used for all of these simulations is MERCURY (more info about the code in <a href="http://articles.adsabs.harvard.edu/cgi-bin/nph-iarticle_query?1999MNRAS.304..793C&amp;data_type=PDF_HIGH&amp;whole_paper=YES&amp;type=PRINTER&amp;filetype=.pdf"> this paper</a> (Chambers 1999)). </p>
+
+              <p>In the beginning I read some papers about the work that was previously done in this field and I tried to reproduce some of those results. I started with the <a href="http://adsabs.harvard.edu/abs/2003Icar..161..404G">paper</a> of Rodney S. Gomes. I took his initial guess for the starting positions of the four big planets and varied the mass distribution of the Kuiper belt objects (KBOs) to see if the migration of the big planets (particularly Neptune) would change significantly between the runs. I noticed that the migration curve does not varry greatly and that it only depends on the total initial mass of the Kuiper belt. The only difference is the time interval during which the Neptune reaches it's present position. Hence, this meant that I could model the migration of Neptune, and the rest of the big planets, with smaller number of bodies with their mass included, and then take this migration curve, change the migration time interval accordingly, implement it into the code and increase the number of bodies, which will now act just as massless objects. This results in a significant boost of speed for the simulation while keeping its credibility.</p>
+
+              <p>The plots of the migration curves of the big planets are shown below. The initial mass of the Kuiper belt ring is ~44 Earth masses and the difference is just in the number of KBOs present at the beginning of the simulations (the inner and outer radius of the Kuiper belt ring are taken as in the Gomes (2003)). The best fit was found for these migration curves, under the assumption that the planets stay on Keplerian orbits while migrating. The fit was later on used in the simulations with an increased number of planetesimals. On the X-axis is time in years, and on Y-axis is the semimajor axis in AU.</p>
+
+              <br><br>
+               <!-- 100 KBOs -->
+              <div class="center-justified">
+                <p align="center"> <u> 100 KBOs </u></p>
+                <img src="images/mps_internship/PlanetMigration_Nbod100.jpg" 
+                    width="750" height="550">
+                </div>
+              <br><br>
+              <!-- 1000 KBOs -->
+              <div class="center-justified">
+                  <p align="center"> <u> 1000 KBOs </u></p>
+                <img width="750" height="550"
+                    src="images/mps_internship/PlanetMigration_Nbod1k.jpg">
+              </div>
+              <br><br>
+              <!-- 10000 KBOs -->
+              <div class="center-justified">
+                  <p align="center"> <u> 10000 KBOs </u></p>
+                  <img width="750" height="550"
+                    src="images/mps_internship/PlanetMigration_Nbod10k.jpg">
+             </div>
+
+              <br><br>
+
+              <p>Below, you may see three videos of the <u>eccentricity</u> (top left), <u>inclination</u> (top right) and <u>X-Y</u> (plane) distribution of KBOs during the time span of <u>1 GY</u>. The initial conditions for big planets were taken from Gomes (2003) paper. Migration of the big planets was modelled according to the migration with 10000 KBOs with total mass of ~44 Earth masses. The description of the objects shown is in the video description. </p>
+
+              <br><br>
+
+              <!-- Eccentricity distribution -->
+              <div style="float:left;width:auto;margin-left:30px;margin-right:20px;">
+                <iframe width="200" height="200"
+                    src="https://www.youtube.com/embed/-B6lgndXTGU">
+                </iframe>
+                <p><u>Eccentricity distribution</u></p>
+              </div>  
+              <!-- Inclination distribution -->
+              <div style="float:left;width:auto;margin-right:20px;">
+                <iframe width="200" height="200"
+                  src="https://www.youtube.com/embed/AYewfSuLYdQ">
+                </iframe>
+                <p><u>Inclination distribution</u></p>
+              </div>
+              <!-- X-Y distribution -->
+              <div style="float:center;width:auto;margin-left:170px;margin-right:20px;">
+                <iframe width="200" height="200"
+                  src="https://www.youtube.com/embed/NI4QYpFOzmg">
+                </iframe>
+                <p><u>X-Y (plane) distribution</u></p>
+              </div>
+
+              <br><br>
+
+              <p>After I got some insight into the migration process, I read the <a href="files/2005-Origin_of_the_orbital_architecture_of_the_giant_planets_of_the_Solar_System..pdf">papers</a> of <u>K. Tsiganis, A. Morbidelli, R. Gomes and H. F. Levison</u> who developed the Nice model. As they claimed, a lot of the events in the Solar system history (LHB, Trojans and the resonant architecture of the big planets) were aligning with the events they got in their simulations, but it seemed that the Kuiper belt structure was still a bit outside their predictions. A. Morbidelli did a short review of the effectivness of the Nice model to explain certain structures in Solar system in this <a href="http://arxiv.org/abs/1010.6221"> paper</a>, where he mentioned a disagreement with observed data because of a deficit in the high inclination population of the Kuiper belt produced by the model. Reproducing the Nice model was not straightforward, because the system is quite chaotic, only a slight change in initial conditions resulst in a completely different output. Since I was just interested in the effect of the Nice model event (short instability of the outer ice giants) to the Kuiper belt structure I didn't worry about the timescale during which the instability will happen. A good starting point was a <a href="http://web.gps.caltech.edu/~mbrown/papers/ps/kon1.pdf"> paper</a> from <u> K. Batygin and M. E. Brown</u>, where they exhibited some plausible initial configurations in order to get the short instability of the outer planets. With 5:3 (Jupiter-Saturn), 4:3 (Saturn-1st Ice giant), 4:3 (1st Ice giant-2nd Ice giant) resonances, total mass of the initial Kuiper belt ring of ~58 Earth masses and the radial distribution index of -1.75 I was able to reproduce the Nice model event. Details about the number of bodies can be seen in the description of the videos. I should just <u>note</u> that the outer ring of bodies (in the beginning the outer ring spans from 40 to 50 AU) is massless. With this I just tried to see how much of an effect would the instability have to the structure of the bodies that were originally at the place where the present Kuiper belt is.</p>
+
+              <br><br>
+
+               <div class="center justified">
+                <p align="center"> <u> Migration curve with the Nice model event </u></p>
+                <img width="750" height="550"
+                    src="images/mps_internship/PlanetMigration_Nice.jpg">
+              </div>
+              <br><br>
+
+              <p>Below you may see the eccentricity, inclination and X-Y plane distribution of the KBOs with the Nice model event included.</p>
+              
+              <br><br>
+              <!-- Eccentricity distribution -->
+              <div style="float:left;width:auto;margin-left:30px;margin-right:20px;">
+                <iframe width="200" height="200"
+                    src="https://www.youtube.com/embed/fY-w2f8b2ws">
+                </iframe>
+                <p><u>Eccentricity distribution</u></p>
+              </div>  
+              <!-- Inclination distribution -->
+              <div style="float:left;width:auto;margin-right:20px">
+                <iframe width="200" height="200"
+                  src="https://www.youtube.com/embed/ZfBGah0lv38">
+                </iframe>
+                <p><u>Inclination distribution</u></p>
+              </div>
+              <!-- X-Y distribution -->
+              <div style="float:center;width:auto;margin-left:170px;margin-right:20px;">
+                <iframe width="200" height="200"
+                  src="https://www.youtube.com/embed/5YTN1diA3Bs">
+                </iframe>
+                <p><u>X-Y (plane) distribution</u></p>
+              </div>
+              <div style="clear:both;height:1em;"></div>
+
+              <br><br>
+
+              <p> <a href="http://arxiv.org/pdf/1506.06019v1.pdf">This paper</a> could offer some explanations and directions to follow. The paper describes the scenario I got in the previous videos. It seems somewhat unexpected to see that the region from <u> 40 to 50 AU</u> doesn't react as much to the instability of the outer Ice giants as would be expected so it needs to be investigated more thoroughly.</p>
+
+              <p>As a bonus, while I was at Max Planck in Göttingen I worked a bit on the <a href="http://rebound.readthedocs.org/en/latest/"> REBOUND package</a> and managed to use it for my simulations. But, a problem with the close encounters remains to be adressed, because by default, the implemented <u> WHFast algorithm</u> (for which the authors claim to be <u>5 times</u> faster than the <u>hybrid algorithm</u> within MERCURY) doesn't have close encounters routine. Hence, to use the code, I would need to incorporate the close encounters routine first. Fortunately, the package contains a lot of examples from which I can extract the information on how to implement this. </p>
+
+
+            </div> 
+        </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="assets/style-2.js"></script>
+</body>
+  <style>
+  </style>
+</html>           
