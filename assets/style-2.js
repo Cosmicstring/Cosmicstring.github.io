@@ -52,8 +52,8 @@ const authordecoration = "none";
 const authorstyle = "normal";
 
 const selfcolor = highlightcolor;
-const selfweight = bodyfontweight;
-const selfdecoration = "none";
+const selfweight = "bold";
+const selfdecoration = "underline";
 const selfstyle = "normal";
 
 const tagcolor = accentcolor;
